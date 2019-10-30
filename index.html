@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> DOM-JS - SEGUNDO DESAFIO</title>
+	</head>
+	<body class="body" id="segundodesafio">
+		<header></header>
+		<main class="main">
+			<h1></h1>
+			<input type="text" onchange = "handleChange (event)">
+		</main>
+		<script type="text/javascript">
+
+
+
+			function handleChange (event){
+				var title = document.querySelector('h1');
+				var name = document.querySelector('input').value;
+
+				title.innerHTML = name;
+				
+				title.addEventListener('mouseleave', function(){
+					title.style.color = 'red'
+				})
+				title.addEventListener('mouseenter', function(){
+					title.style.color = 'blue'
+				})
+			}
+		</script>
+	</body>
+</html>
+
+
